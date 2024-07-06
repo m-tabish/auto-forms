@@ -1,5 +1,3 @@
-Shortcut for preview CTRL + SHIFT +V with github markdown extension in vscode
-
 ## Auto - Forms
 
 This extension helpes you to auto fill the your general info like Name, Phone etc.
