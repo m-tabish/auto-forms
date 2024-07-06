@@ -1,0 +1,19 @@
+{
+	"name": "extension",
+	"version": "1.0",
+	"manifest_version": 3,
+	"permissions": ["activeTab", "scripting"],
+	"action": {
+		"default_popup": "popup.html"
+	},
+	"background": {
+		"service_worker": "background.js"
+	},
+
+	"content_scripts": [
+		{
+			"matches": ["https://docs.google.com/forms/*"],
+			"js": ["content.js"]
+		}
+	]
+}

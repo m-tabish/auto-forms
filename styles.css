@@ -1,0 +1,70 @@
+body {
+    background-image: linear-gradient(to right, #E1E2E1, #EFF0EF);
+    width: 480px;
+    margin: 0;
+    font-size: 14px;
+    border-radius: 4px;
+    background-size: cover;
+}
+
+.title-container {
+    display: flex;
+    align-items: center;
+    height: 48px;
+    background-image: linear-gradient(to right, #ff5722, #FF8A42);
+}
+
+.title {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 16px;
+    color: ghostwhite;
+}
+
+.url-input {
+    margin: 16px;
+}
+
+.url-input input {
+    width: 97%;
+    height: 36px;
+    outline-color: #ff8a50;
+    outline-width: thin;
+    padding: 0 6px;
+    font-size: 14px;
+    color: #606060;
+}
+
+.actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 16px;
+}
+
+.actions > * {
+    text-decoration: none;
+    cursor: pointer;
+    color: #ff5722;
+    height: 28px;
+    width: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    border-radius: 5px;
+    line-height: 1ch;
+    transition: background-color .25s;
+}
+
+.actions > *:hover {
+    background: lightgrey;
+}
+
+.actions #apply {
+    margin-right: 8px;
+}
+
+.actions a:hover {
+    color: #c41c00;
+}
