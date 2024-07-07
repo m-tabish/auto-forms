@@ -1,27 +1,72 @@
-const fields = document.querySelector(".fields")
-const add_btn = document.getElementById("add_field")
-let newName = document.getElementById("newName")
-let output = document.getElementById('output')
-let delete_btn = document.createElement("button")
-delete_btn.innerText = "❌"
-delete_btn.addClassList = "newName"
+const fields = document.querySelector(".fields");
+const add_btn = document.getElementById("add_field");
+let newField = document.getElementById("newField");
+const newValue = document.getElementById("newValue");
+let fields_dict;
+
+try {
+    fields_dict = localStorage.getItem("fields_dict") ? JSON.parse(localStorage.getItem("fields_dict")) : {};
+} catch (e) {
+    console.log(e);
+    fields_dict = {};
+}
+
+for (const key in fields_dict) {
+    const outerdiv = document.createElement("div");
+    const delete_btn = document.createElement("button");
+    delete_btn.innerText = "❌";
+    delete_btn.classList.add("delete_btn");
+    delete_btn.addEventListener("click", function () {
+        delete fields_dict[key];
+        localStorage.setItem("fields_dict", JSON.stringify(fields_dict));
+        this.parentElement.remove();
+    });
+
+    outerdiv.appendChild(document.createElement("div"));
+    outerdiv.appendChild(delete_btn);
+
+    outerdiv.firstElementChild.innerText = key + ": " + fields_dict[key];
+
+    fields.appendChild(outerdiv);
+}
+
+console.log(fields_dict);
+
 function addField() {
-    output.value = newName.value
-    if (!newName.value.trim()) {
-        alert("Enter name of new field")
+    if (!newField.value.trim()) {
+        alert("Enter name of new field");
+        return; // Exit function early if no name is entered
     }
-    else {
-        const newField = document.createElement("div");
-        const newInput = document.createElement("input")
-        newField.innerText = newName.value
-        fields.appendChild(newField);
-        fields.appendChild(newInput);
-        fields.appendChild(delete_btn);
-        delete_btn.classList.add(newName)
-        console.log("clicked")
-    }
+
+    const fieldName = newField.value.trim();
+    const fieldValue = newValue.value.trim();
+    fields_dict[fieldName] = fieldValue;
+
+    console.log(JSON.stringify(fields_dict) + " fd");
+
+    localStorage.setItem("fields_dict", JSON.stringify(fields_dict));
+
+    // Update the UI instantly
+    const outerdiv = document.createElement("div");
+    const delete_btn = document.createElement("button");
+    delete_btn.innerText = "❌";
+    delete_btn.classList.add("delete_btn");
+    delete_btn.addEventListener("click", function () {
+        delete fields_dict[fieldName];
+        localStorage.setItem("fields_dict", JSON.stringify(fields_dict));
+        this.parentElement.remove();
+    });
+
+    outerdiv.appendChild(document.createElement("div"));
+    outerdiv.appendChild(delete_btn);
+
+    outerdiv.firstElementChild.innerText = fieldName + ": " + fieldValue;
+
+    fields.appendChild(outerdiv);
+
+    // Clear the input fields for the next entry
+    newField.value = "";
+    newValue.value = "";
 }
-function deleteClicked() {
-    delete_btn.classList.contains()
-}
-add_field.addEventListener("click", addField)
+
+add_btn.addEventListener("click", addField);
