@@ -75,7 +75,7 @@ function addField() {
 add_btn.addEventListener("click", addField);
 
 // Sending message
-document.getElementById("submit").addEventListener("click", () => {
+document.getElementById("fill").addEventListener("click", () => {
   const message = fields_dict;
   console.log("Clicked");
   // Query the active tab
