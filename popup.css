@@ -1,0 +1,104 @@
+/* popup.css */
+body {
+	background-color: #2d3748; /* Dark background color */
+	color: #ffffff; /* Light text color */
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+		Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+	padding: 20px;
+}
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 400px;
+}
+.title {
+	color: #ffffff;
+	/* position: fixed; */
+	font-size: 1.75rem;
+	line-height: 2.5rem;
+	text-align: center;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+		Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.fields {
+	background-color: #4a5568; /* Slightly lighter background for fields */
+	padding: 20px;
+	margin-bottom: 20px;
+	border-radius: 8px;
+}
+
+.fields div {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 0;
+}
+
+.field_span {
+	font-weight: bold;
+	font-size: 1rem;
+}
+.value_span {
+	font-weight: bold;
+	font-size: 1rem;
+	margin-right: 1rem;
+    text-decoration: underline;
+    text-decoration-color: #9fa1a4;
+     
+}
+.delete_btn {
+	background-color: #718096; /* Button color */
+	color: #ffffff; /* Light text color */
+	border: none;
+	padding: 5px 10px;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+input[type="text"],
+button {
+	background-color: #4a5568; /* Darker background for input fields and buttons */
+	color: #ffffff; /* Light text color */
+	border: none;
+	padding: 10px;
+	margin-bottom: 10px;
+	border-radius: 4px;
+}
+
+input[type="text"]::placeholder {
+	color: #cbd5e0; /* Lighter placeholder text color */
+}
+
+button {
+	cursor: pointer;
+}
+.newInput {
+	display: flex;
+	display: flex;
+	gap: 0.5rem;
+	/* flex-direction: column;  */
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	/* position: fixed; */
+}
+.title_add {
+	font-size: 24px;
+	text-align: center;
+}
+.buttons {
+	display: flex;
+	gap: 0.5rem;
+	justify-content: center;
+	align-items: center;
+}
+.buttons button {
+	background-color: #60a5fa;
+}
+.holder {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

@@ -3,21 +3,42 @@
 
 <head>
   <title>Popup</title>
+  <link rel="stylesheet" href="popup.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+    }
+  </style>
+</head>
+
 </head>
 
 <body>
-  <div class="fields">
+  <h1 class="title ">Auto Forms for G-Forms</h1>
+  <div class="title_add">Add a New Field</div>
 
-    <br>
-    <br>
+  <div class="newInput flex gap-2">
+    <input type="text" placeholder="Enter name of the field " id="newField">
+    <input type="text" placeholder="Enter Value of the Field" id="newValue">
+  </div>
+  <div class="buttons  flex items-center justify-center gap-2">
+    <button id="add_field" class="text-black p-2">Add Field</button>
+    <button id="submit" class="bg-blue-400 text-black p-2">Submit</button>
   </div>
 
-  <div>Add a New Field</div>
-  <input type="text" placeholder="Enter name of the field" id="newField">
-  <input type="text" placeholder="Enter Value of the Field" id="newValue">
-  <button id="add_field">Add Field</button>
-  <div id="output"> Output:</div>
-  <button id="submit">Submit</button>
+  <br>
+
+
+  <!-- fields --> 
+    <div class="fields "></div>
+ 
+
+
+
   <script type="module" src="popup.js"></script>
 </body>
 
