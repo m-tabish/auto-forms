@@ -47,7 +47,7 @@ for (const key in fields_dict) {
   createFieldElement(key, fields_dict[key]);
 }
 
-console.log(fields_dict);
+// console.log(fields_dict);
 
 // Function to add a new field
 function addField() {
@@ -60,7 +60,7 @@ function addField() {
   const fieldValue = newValue.value.trim();
   fields_dict[fieldName] = fieldValue;
 
-  console.log(JSON.stringify(fields_dict) + " fd");
+  // console.log(JSON.stringify(fields_dict) + " fd");
 
   localStorage.setItem("fields_dict", JSON.stringify(fields_dict));
 

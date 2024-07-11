@@ -38,13 +38,13 @@ function autofill(fields_dict) {
         }
 
         pattern = new RegExp(pattern, 'i');
-        console.log(pattern.source + " regex ");
+        // console.log(pattern.source + " regex ");
 
         for (let i = 0; i < field.length; i++) {
             try {
                 if (pattern.test(field[i].innerText)) {
                     outerdiv[i].querySelector(".whsOnd.zHQkBf").value = value;
-                    console.log(`Match found for ${key}`);
+                    // console.log(`Match found for ${key}`);
                 }
             } catch (e) {
                 console.error(e);
