@@ -1,4 +1,5 @@
-![icon_colored_128](https://github.com/m-tabish/auto-forms/assets/67482503/49e8d8ac-e8d2-4806-a867-ab3e627a2679)
+![icon_no_bg_128](https://github.com/m-tabish/auto-forms/assets/67482503/fbd857b2-802a-4b56-9bff-6419d5a25ce2)
+
 # Auto - Fill for G-Forms
 Feeling lazy filling the same data in Forms?  
 
@@ -13,7 +14,8 @@ https://x.com/papayafruit123/status/1811103717825052715
 
 ## Screenshots
 
-![App Screenshot](https://github.com/m-tabish/auto-forms/assets/67482503/7568fda6-4b0c-4910-8649-3f6189c7490e)
+![App Screenshot](https://github.com/m-tabish/auto-forms/assets/67482503/dda21e9c-2773-42a3-a2fd-1b07c24902a3)
+
 ### Current Features :
 
 - Taking Input dynamically to change the values  

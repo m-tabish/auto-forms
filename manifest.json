@@ -6,10 +6,10 @@
 	"action": {
 		"default_popup": "popup.html"
 	},
-	 "icons": {
-    "48": "assets/icon_colored_128.png",
-    "128": "assets/icon_colored_128.png"	
-  },
+	"icons": {
+		"48": "assets/icon_no_bg_128.png",
+		"128": "assets/icon_no_bg_128.png"
+	},
 	"background": {
 		"service_worker": "background.js"
 	},
@@ -21,8 +21,8 @@
 			"type": "module"
 		}
 	],
-	 "author": {
-    "email": "https://m-tabish.github.io/portfolio/"
-  },
-  "short_name": "Auto Fill"
+	"author": {
+		"email": "https://m-tabish.github.io/portfolio/"
+	},
+	"short_name": "Auto Fill"
 }
