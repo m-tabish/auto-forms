@@ -66,6 +66,7 @@ body {
 input[type="text"],
 button {
 	background-color: #4b4b4b; /* Darker background for input fields and buttons */
+	color: white;
 
 	border: none;
 	padding: 10px;
@@ -75,7 +76,7 @@ button {
 
 input[type="text"]::placeholder {
 	color: #cbd5e0; /* Lighter placeholder text color */
-	color: white;
+ 
 }
 
 button {
